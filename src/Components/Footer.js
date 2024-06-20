@@ -5,24 +5,35 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer-section">
+    <div className="footer-section" id="contact">
       <div className="footer-container">
         <div className="ft-info">
           <div className="ft-info-p1">
-            <p className="ft-title">
-              Health <span className="ft-sign">+</span>
-            </p>
-            <p className="ft-description">
+            
+            <p className="ft-list-title">Contact Us</p>
+          <ul className="ft-list-items">
+            <li>
+              <a href="mailto:support@healthplus.com">Email:medAI@gmail.com</a>
+            </li>
+            <li>
+              <a href="tel:+022 5454 5252">Phone:+919001122333</a>
+            </li>
+            <li>
+              <a href="tel:+022 5454 5252">Instagram:medAI_official</a>
+            </li>
+            <li>
+              <a href="tel:+022 5454 5252">Twitter:medAI_official</a>
+            </li>
+          </ul>
+            {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online
               prescriptions, refills and medical notes within minutes. On-demand
               healthcare services at your fingertips.
-            </p>
+            </p> */}
           </div>
-
-          <SubscribeNewsletter />
         </div>
 
-        <div className="ft-list">
+        {/* <div className="ft-list">
           <p className="ft-list-title">Services</p>
           <ul className="ft-list-items">
             <li>
@@ -41,9 +52,9 @@ function Footer() {
               <a href="#services">Insights for doctors</a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
-        <div className="ft-list">
+        {/* <div className="ft-list">
           <p className="ft-list-title">Legal</p>
           <ul className="ft-list-items">
             <li>
@@ -62,10 +73,10 @@ function Footer() {
               <Link to={"/legal"}>How it Works</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="ft-list" id="contact">
-          <p className="ft-list-title">Talk To Us</p>
+          {/* <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
               <a href="mailto:support@healthplus.com">support@healthplus.com</a>
@@ -81,11 +92,11 @@ function Footer() {
             <li>
               <a href="tel:+022 2326 6232">+022 2326 6232</a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
 
-      <div className="ft-copyright">
+      {/* <div className="ft-copyright">
         <p>© 2013-2023 Health+. All rights reserved.</p>
 
         <ul className="ft-social-links">
@@ -140,7 +151,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

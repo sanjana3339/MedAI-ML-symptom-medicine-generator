@@ -22,7 +22,7 @@
     letter-spacing: .8px;
 }
 .ft-sign {
-    color: #1ECAB0;
+    color: #00947e;
     font-family: Cambria, sans-serif;
     font-size: 40px;
     font-weight: bold;
@@ -75,6 +75,7 @@
     border: 2px solid #1A8EFD;
 }
 /* Lists */
+
 .ft-list-title {
     margin: 16px 0;
     font-family: 'Rubik', sans-serif;
@@ -107,7 +108,7 @@
     padding: 24px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
     color: #cbcdd3;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
@@ -118,7 +119,7 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     gap: 12px;
 }
 .ft-social-links li a {
@@ -126,7 +127,7 @@
     height: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     border: 2px solid #cbcdd3;
     border-radius: 50%;
     cursor: pointer;

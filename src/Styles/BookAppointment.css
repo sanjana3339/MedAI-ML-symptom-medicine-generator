@@ -4,8 +4,9 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    background-color: white;
+    background: linear-gradient(to right, #a1bfff, #FBFCFF);
 }
+
 /* Image */
 .ba-image-content {
     width: 50%;

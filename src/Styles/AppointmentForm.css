@@ -3,8 +3,9 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background: linear-gradient(to right, #ECF2FF, #FBFCFF);
-}
+    background: linear-gradient(to right, #a1bfff, #FBFCFF);
+    }
+ 
 .form-title {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;

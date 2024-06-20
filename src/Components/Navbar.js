@@ -6,10 +6,12 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
+import { useNavigate  } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Navbar() {
+  const navigate = useNavigate();
   const [nav, setNav] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
@@ -18,20 +20,14 @@ function Navbar() {
   };
 
   const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Experiencing high traffic, Please wait a moment.", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
-    }
+    navigate("/signuppage");
   };
 
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          Med<span className="navbar-sign">AI</span>
         </Link>
       </h1>
 
@@ -44,22 +40,22 @@ function Navbar() {
         </li>
         <li>
           <a href="#services" className="navbar-links">
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="navbar-links">
             About
           </a>
         </li>
+        {/* <li>
+          <a href="#about" className="navbar-links">
+            About
+          </a>
+        </li> */}
         <li>
-          <a href="#reviews" className="navbar-links">
-            Reviews
+          <a href="#whyus" className="navbar-links">
+            Why Us
           </a>
         </li>
         <li>
-          <a href="#doctors" className="navbar-links">
-            Doctors
+          <a href="#contact" className="navbar-links">
+            Contact Us
           </a>
         </li>
       </ul>
@@ -67,10 +63,8 @@ function Navbar() {
       <button
         className="navbar-btn"
         type="button"
-        disabled={isButtonDisabled}
         onClick={handleChatBtnClick}
-      >
-        <FontAwesomeIcon icon={faCommentDots} /> Live Chat
+      > Sign In
       </button>
 
       {/* Mobile */}

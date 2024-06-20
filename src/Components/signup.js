@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
 
-function AppointmentForm() {
+function signForm() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
@@ -79,12 +79,12 @@ function AppointmentForm() {
 
       <div className="form-container">
         <h2 className="form-title">
-          <span>Sign In</span>
+          <span>Register</span>
         </h2>
 
         <form className="form-content" onSubmit={handleSubmit}>
           <label>
-            Full Name:
+            Username:
             <input
               type="text"
               value={patientName}
@@ -96,9 +96,9 @@ function AppointmentForm() {
 
           <br />
           <label>
-            Phone Number:
+            Passord:
             <input
-              type="text"
+              type="password"
               value={patientNumber}
               onChange={(e) => setPatientNumber(e.target.value)}
               required
@@ -107,7 +107,7 @@ function AppointmentForm() {
           </label>
 
           <br />
-          <label>
+          {/* <label>
             Gender:
             <select
               value={patientGender}
@@ -119,11 +119,11 @@ function AppointmentForm() {
               <option value="female">Female</option>
             </select>
             {formErrors.patientGender && <p className="error-message">{formErrors.patientGender}</p>}
-          </label>
+          </label> */}
 
 
           <br />
-          <label>
+          {/* <label>
             Age:
             <input
               type="int"
@@ -132,7 +132,7 @@ function AppointmentForm() {
               required
             />
             {formErrors.patientName && <p className="error-message">{formErrors.patientName}</p>}
-          </label>
+          </label> */}
           {/* <label>
             Preferred Appointment Time:
             <input
@@ -177,4 +177,4 @@ function AppointmentForm() {
   );
 }
 
-export default AppointmentForm;
+export default signForm;

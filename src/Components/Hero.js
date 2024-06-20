@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Doctor from "../Assets/doctor-picture.png";
+import Doctor from "../Assets/med.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate  } from "react-router-dom";
@@ -36,23 +36,21 @@ function Hero() {
     <div className="section-container">
       <div className="hero-section">
         <div className="text-section">
-          <p className="text-headline">❤️ Health comes first</p>
+          <p className="text-headline">Health comes first</p>
           <h2 className="text-title">
-            Find your Doctor and make an Appointments
+            Find your medicines
           </h2>
           <p className="text-descritpion">
-            Talk to online doctors and get medical advice, online prescriptions,
-            refills and medical notes within minutes. On-demand healthcare
-            services at your fingertips.
+          Your convenient solution for ordering prescriptions and healthcare essentials
           </p>
           <button
             className="text-appointment-btn"
             type="button"
             onClick={handleBookAppointmentClick}
           >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+            Register Now!
           </button>
-          <div className="text-stats">
+          {/* <div className="text-stats">
             <div className="text-stats-container">
               <p>145k+</p>
               <p>Receive Patients</p>
@@ -67,7 +65,7 @@ function Hero() {
               <p>10+</p>
               <p>Years of Experience</p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="hero-image-section">

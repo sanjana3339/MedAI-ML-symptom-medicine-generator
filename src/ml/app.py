@@ -27,13 +27,15 @@
 # if __name__ == "__main__":
 #     print("hello")
 #     app.run(debug=True)
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,jsonify
 import pickle
 import numpy as np
+from flask_cors import CORS, cross_origin
 
 model = pickle.load(open('iris.pkl', 'rb'))
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 symptoms = {
     'Difficulty breathing': 1,
@@ -128,25 +130,38 @@ medications = {
     26: 'Oxygen therapy'
 }
 
-@app.route('/')
-def man():
-    return render_template('home.html')
-
-
-@app.route('/predict', methods=['POST'])
-def home():
-    
-    d1 = request.form['a']
-    data1=symptoms[d1]
-    d2 = request.form['b']
-    data2=symptoms[d2]
-    d3 = request.form['c']
-    data3=symptoms[d3]
+@app.route('/suggest', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def predict():
+    data = request.json
+    data1 = symptoms.get(data['symptom1'])
+    data2 = symptoms.get(data['symptom2'])
+    data3 = symptoms.get(data['symptom3'])
     arr = np.array([[data1, data2, data3]])
     pred = model.predict(arr)
-    return render_template('after.html', data=medications[pred[0]+1])
-
+    return jsonify({"suggestion": medications[pred[0]+1]})
 
 if __name__ == "__main__":
-    # print("hello")
-    app.run(debug=True)
+    app.run(debug=True,port=5000)
+# @app.route('/')
+# def man():
+#     return render_template('home.html')
+
+
+# @app.route('/predict', methods=['POST'])
+# def home():
+    
+#     d1 = request.form['a']
+#     data1=symptoms[d1]
+#     d2 = request.form['b']
+#     data2=symptoms[d2]
+#     d3 = request.form['c']
+#     data3=symptoms[d3]
+#     arr = np.array([[data1, data2, data3]])
+#     pred = model.predict(arr)
+#     return render_template('after.html', data=medications[pred[0]+1])
+
+
+# if __name__ == "__main__":
+#     # print("hello")
+#     app.run(debug=True)

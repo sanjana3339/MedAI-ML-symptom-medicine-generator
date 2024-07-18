@@ -20,7 +20,7 @@ function Navbar() {
   };
 
   const handleChatBtnClick = () => {
-    navigate("/signuppage");
+    navigate("/signin");
   };
 
   return (
@@ -64,7 +64,7 @@ function Navbar() {
         className="navbar-btn"
         type="button"
         onClick={handleChatBtnClick}
-      > Sign In
+      > Login
       </button>
 
       {/* Mobile */}

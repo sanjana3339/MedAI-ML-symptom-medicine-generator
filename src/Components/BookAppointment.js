@@ -12,7 +12,7 @@ function BookAppointment() {
   const navigate = useNavigate();
 
   const handleBookAppointmentClick = () => {
-    navigate("/Appointment");
+    navigate("/medicine");
   };
 
   return (

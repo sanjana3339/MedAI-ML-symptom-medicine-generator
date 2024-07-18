@@ -3,8 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 
-data = pd.read_csv("C:\\Users\\mudim\\Health-Plus\\src\\ml\\data.csv")
-
+data = pd.read_csv("data.csv")
 
 # Remove whitespaces from column names
 data.columns = data.columns.str.strip()

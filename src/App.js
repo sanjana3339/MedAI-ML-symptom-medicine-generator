@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home";
 import Legal from "./Pages/Legal";
-import NotFound from "./Pages/NotFound";
-import Appointment from "./Pages/Appointment";
+import Register from "./Pages/Register";
+import SignInPage from "./Components/signinpage";
+import MHome from "./ml/Home";
+import After from "./ml/After";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />
-          <Route path="/appointment" element={<Appointment />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/medicine" element={<MHome/>} />
+          <Route path="/after" element={<After />} />
         </Routes>
       </Router>
     </div>

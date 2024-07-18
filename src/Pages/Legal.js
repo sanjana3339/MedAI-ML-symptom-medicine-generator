@@ -1,8 +1,8 @@
-import React from "react";
-import LegalDocs from "../Components/LegalDocs";
+// import React from "react";
+// import LegalDocs from "../Components/LegalDocs";
 
-function Legal() {
-  return <LegalDocs />;
-}
+// function Legal() {
+//   return <LegalDocs />;
+// }
 
-export default Legal;
+// export default Legal;

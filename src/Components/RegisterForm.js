@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
 import Navbar from "./Navbar";
@@ -58,7 +57,7 @@ function RegisterForm() {
       return;
     }
 
-    // Reset form fields and errors after successful submission
+    
     setName("");
     setPatientName("");
     setPatientPhone("");
@@ -78,9 +77,7 @@ function RegisterForm() {
     <div className="appointment-form-section">
       <Navbar />
       <h1 className="legal-siteTitle">
-        {/* <Link to="/">
-          Med<span className="legal-siteSign">AI</span>
-        </Link> */}
+       
       </h1>
 
       <div className="form-container">

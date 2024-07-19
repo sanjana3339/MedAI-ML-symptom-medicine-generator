@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCommentDots,
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
 import { useNavigate  } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 
 function Navbar() {
   const navigate = useNavigate();
   const [nav, setNav] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const openNav = () => {
     setNav(!nav);
@@ -31,7 +28,6 @@ function Navbar() {
         </Link>
       </h1>
 
-      {/* Desktop */}
       <ul className="navbar-items">
         <li>
           <Link to="/" className="navbar-links">
@@ -43,11 +39,6 @@ function Navbar() {
             About
           </a>
         </li>
-        {/* <li>
-          <a href="#about" className="navbar-links">
-            About
-          </a>
-        </li> */}
         <li>
           <a href="#whyus" className="navbar-links">
             Why Us
@@ -67,7 +58,6 @@ function Navbar() {
       > Login
       </button>
 
-      {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
         <div onClick={openNav} className="mobile-navbar-close">
           <FontAwesomeIcon icon={faXmark} className="hamb-icon" />
@@ -107,7 +97,6 @@ function Navbar() {
         </ul>
       </div>
 
-      {/* Hamburger Icon */}
       <div className="mobile-nav">
         <FontAwesomeIcon
           icon={faBars}
